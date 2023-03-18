@@ -4,7 +4,11 @@
 
 /* betty style doc for function main goes there */
 
-/* main - entry point */
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
 		int n;
@@ -16,10 +20,12 @@ int main(void)
 				{
 					printf("%d is positive\n", n);
 				}
-				else if (n == 0) 
+				else if (n == 0)
 				{
 					printf("%d is zero\n", n);
-				} else {
+				}
+				else
+				{
 					 printf("%d is zero\n", n);
 				}
 					return (0);
