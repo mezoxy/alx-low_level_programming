@@ -15,7 +15,7 @@ int main(void)
 		if (ch != '9')
 		{
 			putchar(',');
-			putchar('\t');
+			putchar(' ');
 		}
 		else
 		{
