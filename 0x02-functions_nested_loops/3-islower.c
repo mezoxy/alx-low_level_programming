@@ -5,19 +5,19 @@
  *
  * Return: 1 if the charcter is lowercase, 0 if it's not
  *
- * @c: Parameter
+ * @c: input of function
  */
 
 int _islower(int c)
 {
 	int c;
 
-	if (c >= 'a' && c <= 'z')
+	if (c >= 97 && c <= 122)
 	{
-		_putchar('1');
+		return (1)
 	}
 	else
 	{
-		_putchar('0');
+		return (0);
 	}
 }
