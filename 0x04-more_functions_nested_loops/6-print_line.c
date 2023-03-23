@@ -1,4 +1,4 @@
-#includec "main.h"
+#include "main.h"
 /**
  * print_line - Draws a straight line
  * @n: Input
