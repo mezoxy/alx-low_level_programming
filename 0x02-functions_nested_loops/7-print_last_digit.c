@@ -7,13 +7,14 @@
 int print_last_digit(int n)
 {
 	int m = n % 10;
+	int v = (-1) * m;
+
 	if (n >= 0)
 	{
 	return (m);
 	}
 	else 
 	{
-		int v = (-1) * m;
-		return (m);
+		return (v);
 	}
 }
