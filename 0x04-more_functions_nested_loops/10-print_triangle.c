@@ -14,11 +14,11 @@ void print_triangle(int size)
 	}
 	else
 	{
-		for (x = 0; x < size; x++)
+		for (x = 1; x <= size; x++)
 		{
-			for (y = 0; y < size; y++)
+			for (y = 1; y <= size; y++)
 			{
-				if (y <= size && y >= size - x)
+				if (y <= (size + 1) - x && y <= size)
 				{
 					_putchar('#');
 				}
@@ -29,5 +29,6 @@ void print_triangle(int size)
 			}
 			_putchar('\n');
 		}
+		_putchar('\n');
 	}
 }
