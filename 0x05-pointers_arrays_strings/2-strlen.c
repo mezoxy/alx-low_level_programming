@@ -4,7 +4,7 @@
  * Return: Length of a string
  * @s: String
  */
-int _strlen(char *s);
+int _strlen(char *s)
 {
 	int sum = 0;
 
