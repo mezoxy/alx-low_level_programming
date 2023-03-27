@@ -5,7 +5,13 @@
  */
 void print_rev(char *s)
 {
-	int x = _strlen(s) + 1;
+	int num = 0;
+
+	while (*s++)
+	{
+		num++;
+	}
+	int x = num;
 
 	while (x >= 0)
 	{
