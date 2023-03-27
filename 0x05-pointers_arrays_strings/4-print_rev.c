@@ -5,9 +5,9 @@
  */
 void print_rev(char *s)
 {
-	int x;
+	int x = _strlen(s) + 1;
 
-	while (x != 0)
+	while (x >= 0)
 	{
 		_putchar(s[x]);
 		x--;
