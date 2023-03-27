@@ -6,12 +6,13 @@
 void print_rev(char *s)
 {
 	int num = 0;
+	int x;
 
 	while (*s++)
 	{
 		num++;
 	}
-	int x = num;
+	x = num;
 
 	while (x >= 0)
 	{
