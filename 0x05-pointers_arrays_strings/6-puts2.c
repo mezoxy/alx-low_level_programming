@@ -12,7 +12,7 @@ void puts2(char *str)
 	{
 		i++;
 	}
-	for (i = 0; j <= i; j++)
+	for (j = 0; j <= i; j++)
 	{
 		while (j % 2 == 0)
 		{
@@ -20,4 +20,5 @@ void puts2(char *str)
 			j++;
 		}
 	}
+	_putchar('\n');
 }
