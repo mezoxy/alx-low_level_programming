@@ -14,15 +14,15 @@ int main(void)
 		for (j = i + 1; j <= 9; j++)
 		{
 			putchar(i + '0');
+			putchar((i != 8) ? (j + '0') : (j + '0'));
 			if (i != 8)
 			{
-				putchar(j + '0');
 				putchar(',');
 				putchar(' ');
 			}
 			else
 			{
-				putchar(j + '0');
+				putchar('\n');
 			}
 
 		}
