@@ -28,12 +28,16 @@ char *_strncat(char *dest, char *src, int n)
 			dest[k] = src[k - j];
 		}
 	}
-	else
+	else if (n < i && n >= 0)
 	{
 		for (k = j; k <= n + j - 1; k++)
 		{
 			dest[j] = src[k - j];
 		}
+	}
+	else
+	{
+		return (dest);
 	}
 	return (dest);
 }
