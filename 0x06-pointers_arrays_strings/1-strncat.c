@@ -11,24 +11,29 @@ char *_strncat(char *dest, char *src, int n)
 {
 	int i = 0;
 	int j = 0;
-	char ch[n - 1];
+	int k;
 
 	while (src[i] != '\0')
 	{
 		i++;
 	}
+	while (dest[j] = '\0')
+	{
+		j++;
+	}
 	if (i <= n)
 	{
-		dest = _strcat(dest, src);
+		for (k = j; k <= i + j - 1; k++)
+		{
+			dest[k] = src[k - j];
+		}
 	}
 	else
 	{
-		while (j <= n - 1)
+		for (k = j; k <= n + j - 1; k++)
 		{
-			ch[j] = src[j];
-			j++;
+			dest[j] = src[k - j];
 		}
-		dest = _strcat(dest, src);
 	}
 	return (dest);
 }
