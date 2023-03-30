@@ -27,17 +27,15 @@ char *_strncat(char *dest, char *src, int n)
 		{
 			dest[k] = src[k - j];
 		}
+		dest[i + j] = '\0';
 	}
-	else if (n < i && n >= 0)
+	else
 	{
 		for (k = j; k <= n + j - 1; k++)
 		{
 			dest[j] = src[k - j];
 		}
-	}
-	else
-	{
-		return (dest);
+		dest[n + j] = '\0';
 	}
 	return (dest);
 }
