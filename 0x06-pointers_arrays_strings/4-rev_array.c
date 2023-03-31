@@ -15,8 +15,8 @@ void reverse_array(int *a, int n)
 		a[i] = a[n - i - 1];
 		a[n - i - 1] = e;
 	}
-	if (n == 1)
+	if (n <= 1)
 	{
-		a[0] = a [0];
+		a[0] = a[0];
 	}
 }
