@@ -8,13 +8,12 @@ char *string_toupper(char *stg)
 {
 	int i;
 
-	while (stg[i] != '\0')
+	for (i = 0; stg[i] != '\0'; i++)
 	{
 		if (stg[i] >= 97 && stg[i] <= 122)
 		{
 			stg[i] = stg[i] - 32;
 		}
-		i++;
 	}
 	return (stg);
 }
