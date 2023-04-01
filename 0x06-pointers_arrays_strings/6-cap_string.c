@@ -2,10 +2,18 @@
 /**
  * cap_string - Function that capitalizes all words of a string
  * Return: Uppercase character
- * @stg: Pointer
+ * @stg: String
  */
 char *cap_string(char *stg)
 {
-	int i = 0;
-	if (stg )
+	int i;
+
+	for (i = 0; stg[i] != '\0'; i++)
+	{
+		if (stg[i] == ' ' && stg[i + 1] >= 97 && stg[i + 1] <= 122)
+		{
+			stg[i + 1] = stg[i + 1] - 32;
+		}
+	}
+	return (stg);
 }
