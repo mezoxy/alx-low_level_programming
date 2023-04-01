@@ -14,6 +14,10 @@ char *cap_string(char *stg)
 		{
 			stg[i + 1] = stg[i + 1] - 32;
 		}
+		else if (stg[0] >= 97 && stg[0] <= 122)
+		{
+			stg[0] = stg[0] - 32;
+		}
 	}
 	return (stg);
 }
