@@ -7,10 +7,15 @@
 char *cap_string(char *stg)
 {
 	int i;
+	int j = 0;
 
-	for (i = 0; stg[i] != '\0'; i++)
+	while (stg[j] != '\0')
 	{
-		if (stg[i] == ' ' && stg[i + 1] >= 97 && stg[i + 1] <= 122)
+		j++;
+	}
+	for (i = 0; i < j; i++)
+	{
+		if (stg[i] == ' ' && stg[i + 1] >= 97 && stg[i + 1] <= 122 && i < j)
 		{
 			stg[i + 1] = stg[i + 1] - 32;
 		}
