@@ -27,9 +27,9 @@ char *cap_string(char *stg)
 		{
 			stg[i + 1] = stg[i + 1] - 32;
 		}
-		else if (stg[i] == 92 && stg[i + 1] >= 97 && stg[i + 1] <= 122)
+		else if (stg[i] == 92 && stg[i + 2] >= 97 && stg[i + 2] <= 122)
 		{
-			stg[i + 1] = stg[i + 1] - 32;
+			stg[i + 2] = stg[i + 2] - 32;
 		}
 	}
 	return (stg);
