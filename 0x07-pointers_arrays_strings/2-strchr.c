@@ -16,9 +16,12 @@ char *_strchr(char *s, char c)
 		{
 			return (s + i);
 		}
-		s = NULL;
+		else
+		{
+			return (NULL);
+		}
 		i++;
 	}
-	return (s);
+	return (0);
 }
 
