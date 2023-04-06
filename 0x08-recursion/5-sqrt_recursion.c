@@ -4,19 +4,29 @@
  * @n: Input (number)
  * Return: Root of number
  */
-int _pow_recursion(int x, int y);
-
 int _sqrt_recursion(int n)
 {
-	int i = 0;
-	int k = _pow_recursion(i, 2)
-
-	if (n < i * i)
-	{
+	if (n < 0)
 		return (-1);
-	}
-	if (n == i * i)
+	else
+	return (SQUAR(n, 0));
+}
+
+int SQUAR(int n, int root)
+{
+	int k;
+
+	if (root * root == n)
 	{
-		return (i);
+		k = root;
 	}
+	else if (root * root < n)
+	{
+		return (SQUAR(n, root + 1));
+	}
+	else
+	{
+		k = -1;
+	}
+	return (k);
 }
