@@ -26,7 +26,7 @@ int SQUAR_root(int n, int root)
 	}
 	else if (root * root < n)
 	{
-		return (SQUAR(n, root + 1));
+		return (SQUAR_root(n, root + 1));
 	}
 	else
 	{
