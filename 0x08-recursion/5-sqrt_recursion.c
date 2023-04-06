@@ -8,11 +8,15 @@ int _sqrt_recursion(int n)
 {
 	if (n < 0)
 		return (-1);
-	else
-	return (SQUAR(n, 0));
+	return (SQUAR_root(n, 0));
 }
-
-int SQUAR(int n, int root)
+/**
+* SQUAR_root - A function that determine root
+* Return: Root
+* @n: Input
+* @root: integer
+*/
+int SQUAR_root(int n, int root)
 {
 	int k;
 
