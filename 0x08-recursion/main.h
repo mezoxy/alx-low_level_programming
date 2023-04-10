@@ -9,3 +9,5 @@ int is_prime_number(int n);
 int SQUAR_root(int n, int root);
 int is_prime_number(int n);
 int Remainder(int x, int y);
+int is_palindrome(char *s);
+int wildcmp(char *s1, char *s2);

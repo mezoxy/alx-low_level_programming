@@ -25,7 +25,7 @@ int Remainder(int x, int y)
 	{
 		return (0);
 	}
-	else if (y > 2 && x % (y - 1) != 0)
+	else if (y > 2 && x % y != 0)
 	{
 		return (Remainder(x, y - 1));
 	}
