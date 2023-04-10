@@ -9,17 +9,19 @@
 int main(int argc, char *argv[])
 {
 	int i;
-	char prod = 1;
+	int prod = 1;
 
 	for (i = 1; i < argc; i++)
 	{
-		prod = prod * atoi(argv[i]);
+		prod = prod * atol(argv[i]);
 	}
-	printf("%d\n", prod);
 	if (argc - 1 == 0)
 	{
 		printf("Error\n");
-		return (1);
+	}
+	else
+	{
+		printf("%d\n", prod);
 	}
 	return (0);
 }
