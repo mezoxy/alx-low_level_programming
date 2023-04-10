@@ -8,20 +8,16 @@
  */
 int main(int argc, char *argv[])
 {
-	int i;
-	int prod = 1;
+	int prod;
 
-	for (i = 1; i < argc; i++)
-	{
-		prod = prod * atol(argv[i]);
-	}
-	if (argc - 1 == 0)
+	if (argc - 1 <= 1)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	else
+	else if (argc - 1 == 2)
 	{
+		prod = atoi(argv[1]) * atoi(argv[2]);
 		printf("%d\n", prod);
 	}
 	return (0);
