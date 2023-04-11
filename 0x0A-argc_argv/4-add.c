@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 /**
  * main - Entry point
  * Return: Always 0 (Success)
@@ -10,13 +11,10 @@ int main(int argc, char *argv[])
 {
 	int i;
 	int sum = 0;
-	char *c;
 
 	for (i = 1; i < argc; i++)
 	{
-		c = argv[i];
-
-		if (*c < '0' || *c > '9')
+		if (!isdigit(argv[i]))
 		{
 			printf("Error\n");
 			return (1);
