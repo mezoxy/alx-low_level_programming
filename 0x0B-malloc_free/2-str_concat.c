@@ -14,9 +14,12 @@ char *str_concat(char *s1, char *s2)
 	unsigned int j = 0;
 	char *concat_str;
 
-	if (!s1 || !s2)
+	if (!s1)
 	{
 		s1 = "";
+	}
+	if (!s2)
+	{
 		s2 = "";
 	}
 	while (s1[size1] != '\0')
