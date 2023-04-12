@@ -8,10 +8,7 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	unsigned int size1 = 0;
-	unsigned int size2 = 0;
-	unsigned int i = 0;
-	unsigned int j = 0;
+	unsigned int size1 = 0, size2 = 0, i = 0, j = 0;
 	char *concat_str;
 
 	if (!s1)
