@@ -14,15 +14,16 @@ char *str_concat(char *s1, char *s2)
 	unsigned int j = 0;
 	char *concat_str;
 
-	if (!s1 && !s2)
+	if (!s1 || !s2)
 	{
-		return (NULL);
+		s1 = "";
+		s2 = "";
 	}
-	while (s1 && s1[size1] != '\0')
+	while (s1[size1] != '\0')
 	{
 		size1++;
 	}
-	while (s2 && s2[size2] != '\0')
+	while (s2[size2] != '\0')
 	{
 		size2++;
 	}
