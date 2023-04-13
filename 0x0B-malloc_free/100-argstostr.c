@@ -32,6 +32,6 @@ char *argstostr(int ac, char **av)
 		j += strlen(av[i]);
 		ptr[j++] = '\n';
 	}
-	ptr[length_of_string] = '\0';
+	ptr[length_of_string + ac] = '\0';
 	return (ptr);
 }
