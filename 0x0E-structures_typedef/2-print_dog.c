@@ -11,7 +11,7 @@ void print_dog(struct dog *d)
 	{
 		return;
 	}
-	if (d->owner == NULL || d->age == NULL)
+	if (d->owner == NULL || d->age == 0.0)
 	{
 		printf("(NIL)");
 	}
