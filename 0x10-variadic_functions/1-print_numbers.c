@@ -21,7 +21,11 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		{
 			printf("%d%c", arg, *separator);
 		}
-		else
+		else if (i == n - 1)
+		{
+			printf("%d", arg);
+		}
+		else if (separator == NULL)
 		{
 			printf("%d", arg);
 		}
