@@ -2,19 +2,16 @@
 #include <stdlib.h>
 #include "function_pointers.h"
 /**
+ * print_name - A function that prints a name
+ * @name: A pointer
+ * @f: A function pointer
  */
 
 void print_name(char *name, void (*f)(char *))
 {
-	int i;
-
-	i = 0;
-	while (name[i] != '\0')
+	if (name == NULL || f == NULL)
 	{
-		_putchar(name[i]);
-		i++;
+		return;
 	}
-	_putchar(' ');
 	f(name);
-	_putchar('\n');
 }
