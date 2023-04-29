@@ -1,21 +1,30 @@
 #include "main.h"
+#include <string.h>
 /**
- * is_palindrome - A function that determine if a string is it a palindrome or not
- * Retuen: 1 if the string is it palindrom 0 otherwise
+ * is_palindrome - Determine if a string is it a palindrome or not
+ * Return: 1 if the string is it palindrom 0 otherwise
  *@s: String
  */
 
-void _puts_recursion(char *s);
-void _print_rev_recursion(char *s);
-
 int is_palindrome(char *s)
 {
-	char *h = _print_rev_recursion(s);
-	char *hh = _puts_recursion(s);
+	unsigned long int i;
+	int k;
 
-	if (*h != *hh)
+	if (!s)
 	{
-		return (0);
+		return (1);
 	}
-	return (1);
+	for (i = 0; i < strlen(s) / 2; i++)
+	{
+		if (s[i] != s[strlen(s) - 1 - i])
+		{
+			k = 0;
+		}
+		else
+		{
+			k = 1;
+		}
+	}
+	return (k);
 }
