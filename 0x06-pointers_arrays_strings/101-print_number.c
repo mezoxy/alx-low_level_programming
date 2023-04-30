@@ -1,0 +1,21 @@
+#include "main.h"
+/**
+ * print_number - A function that prints an integer.
+ * @n: An integer
+ */
+void print_number(int n)
+{
+	unsigned int i;
+
+	i = n;
+
+	if (n < 0)
+	{
+		_putchar('-');
+		i = -n;
+	}
+	if (i / 10 != 0)
+	{
+		print_number(i / 10);
+	}
+}
