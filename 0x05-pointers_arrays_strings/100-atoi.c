@@ -6,7 +6,8 @@
  */
 int _atoi(char *s)
 {
-	int n = 0, i = 0, sig = 1;
+	long int n = 0;
+	int i = 0, sig = 1;
 
 	while (s[i] != '\0' && (s[i] < '0' || s[i] > '9'))
 	{
