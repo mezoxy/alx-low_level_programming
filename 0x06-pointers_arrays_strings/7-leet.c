@@ -1,7 +1,8 @@
 #include "main.h"
 /**
- * Mozart - function that encodes a string into 1337.
+ * leet - function that encodes a string into 1337.
  * Return: A string
+ * @s: A string
  */
 char *leet(char *s)
 {
