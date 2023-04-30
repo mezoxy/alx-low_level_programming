@@ -2,32 +2,30 @@
 /**
  * cap_string - Function that capitalizes all words of a string
  * Return: Uppercase character
- * @stg: String
+ * @s: String
  */
-char *cap_string(char *stg)
+char *cap_string(char *s)
 {
-	int i;
-	int j = 0;
-	int k;
+	int i = 0, k;
 	char spe[] = {',', ';', '\n', '\t', ')', '(', '{', '}', '.', ' ', '?', '!'};
 
-	while (stg[j] != '\0')
-	{
-		j++;
-	}
-	for (i = 0; i < j; i++)
+	if (*(s + i) >= 97 && *(s + i) <= 122)
+		*(s + i) -= 32;
+	i++;
+	while (*(s + i) != '\0')
 	{
 		for (k = 0; k < 12; k++)
 		{
-			if (stg[i] == spe[i] && stg[i + 1] >= 97 && stg[i + 1] <= 122)
+			if (*(s + i) == '\t')
+				*(s + i) = ' ';
+			if (*(s + i) == spe[k])
 			{
-			stg[i + 1] = stg[i + 1] - 32;
-			}
-			else if (stg[0] >= 97 && stg[0] <= 122)
-			{
-				stg[0] = stg[0] - 32;
+				if (*(s + i + 1) >= 97 && *(s + i + 1) <= 122)
+					*(s + i + 1) -= 32;
+				break;
 			}
 		}
+		i++;
 	}
-	return (stg);
+	return (s);
 }
