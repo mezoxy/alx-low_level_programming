@@ -4,6 +4,9 @@
  * @s: A string
  * Return: 1 if the string is a palindrome
  */
+int strreculen(char *s);
+int ifpal(char *s, int i, int len);
+
 int is_palindrome(char *s)
 {
 	if (*s == 0)
@@ -12,9 +15,6 @@ int is_palindrome(char *s)
 	}
 	return (ifpal(s, 0, strreculen(s)));
 }
-
-int strreculen(char *s);
-int ifpal(char *s, int i, int len);
 
 /**
  * strreculen - A finction
