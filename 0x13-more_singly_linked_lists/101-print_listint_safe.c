@@ -23,7 +23,7 @@ size_t print_listint_safe(const listint_t *head)
 	{
 		if (t == h)
 		{
-			to = he;
+			t = h;
 			while (t != h)
 			{
 				i++;
