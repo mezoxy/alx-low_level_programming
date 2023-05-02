@@ -20,7 +20,7 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 		ptr = ptr->next;
 		j++;
 	}
-	if (index <= j)
+	if (index <= j && ptr != NULL)
 	{
 		if (index != i)
 		{
