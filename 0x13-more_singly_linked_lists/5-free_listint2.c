@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stdlib.h>
 /**
  * free_listint2 - A function that frees a list
  * @head: A pointer
@@ -13,9 +14,9 @@ void free_listint2(listint_t **head)
 	}
 	while (ptr)
 	{
-		ptr = ptr->next;
-		free(*head);
-		*head = ptr;
+		listint_t *ptr1 = ptr->next;
+		free(ptr);
+		ptr = ptr1;
 	}
 	*head = NULL;
 }
