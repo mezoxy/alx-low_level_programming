@@ -9,6 +9,7 @@
 size_t print_listint_safe(const listint_t *head)
 {
 	size_t i, j = 0;
+
 	i = nmbr_uniqu(head);
 
 	if (i == 0)
