@@ -1,10 +1,13 @@
 #include "main.h"
 #include <stdio.h>
+
 /**
- * _sqrt_recursion - A function that returns the square root of a number n
+ * _sqrt_recursion_helper - A helper function
+ * @i: An integer
  * @n: An integer
- * Return: Square root
+ * Return: A root squar
  */
+
 int _sqrt_recursion_helper(int n, int i)
 {
 	if (n < 0 || i * i > n)
@@ -20,6 +23,12 @@ int _sqrt_recursion_helper(int n, int i)
 	return (_sqrt_recursion_helper(n, i + 1));
 	}
 }
+
+/**
+ * _sqrt_recursion - A function that returns the square root of a number n
+ * @n: An integer
+ * Return: Square root
+ */
 
 int _sqrt_recursion(int n)
 {
