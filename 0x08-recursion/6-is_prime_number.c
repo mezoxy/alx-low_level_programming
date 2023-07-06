@@ -3,6 +3,7 @@
 /**
  * is_prime_number - A function
  * @n: An integer
+ * @x: An integer
  * Return: 1 or 0
  */
 int Helper_function(int n, int x);
