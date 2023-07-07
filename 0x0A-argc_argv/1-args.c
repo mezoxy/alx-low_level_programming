@@ -9,11 +9,7 @@
 
 int main(int argc, char *argv[])
 {
-	int i = 0;
-
-	for (; i < argc; i++)
-	{
-		printf("%s\n", argv[i]);
-	}
+	if (argv[argc - 1] != NULL)
+	printf("%d\n", argc - 1);
 	return (0);
 }
