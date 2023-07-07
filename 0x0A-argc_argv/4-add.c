@@ -14,11 +14,15 @@ int main(int argc, char *argv[])
 	int i = 0;
 	long int sum = 0;
 
+	/*if (argc == 1)
+	{
+		printf("%ld\n", sum);
+	}*/
 	for (i = 1; i < argc; i++)
 	{
 		int j = 0;
 
-		while (argv[i][j] != '\0')
+		while (argv[i][j] != '\0' && argc != 1)
 		{
 		if (!isdigit(argv[i][j]))
 		{
