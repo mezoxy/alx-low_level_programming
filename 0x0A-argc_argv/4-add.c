@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 
 	if (argc == 1)
 	{
-		printf("%ld\n", sum);
+		printf("0\n");
 	}
 	if (argc > 1)
 	{
