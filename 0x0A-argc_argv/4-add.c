@@ -14,10 +14,13 @@ int main(int argc, char *argv[])
 	int i = 0;
 	long int sum = 0;
 
-	/*if (argc == 1)
+
+	if (argc == 1)
 	{
 		printf("%ld\n", sum);
-	}*/
+	}
+	if (argc > 1)
+	{
 	for (i = 1; i < argc; i++)
 	{
 		int j = 0;
@@ -37,5 +40,6 @@ int main(int argc, char *argv[])
 		}
 	}
 	printf("%ld\n", sum);
+	}
 	return (0);
 }
