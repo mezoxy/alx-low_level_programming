@@ -26,11 +26,11 @@ char *_strdup(char *str)
 		{
 			*(ptr + i) = str[i];
 		}
+		*(ptr + strlen(str)) = '\0';
 	}
 	if (str == NULL)
 	{
 		return (NULL);
 	}
 	return (ptr);
-	free(ptr);
 }
