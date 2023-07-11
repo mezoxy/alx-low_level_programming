@@ -11,6 +11,7 @@
 
 char *str_concat(char *s1, char *s2)
 {
+	/*unsigned i = 0;*/
 	char *ptr;
 
 	if (s1 == NULL && s2 == NULL)
@@ -19,6 +20,19 @@ char *str_concat(char *s1, char *s2)
 	}
 	ptr = malloc(sizeof(char) * (strlen(s1) + strlen(s2)) + 1);
 
-	ptr = strcat(s1, s2);
+	if (!ptr)
+	{
+		return (NULL);
+	}
+	if (s1 == NULL)
+	{
+		s1 = "";
+	}
+	if (s2 == NULL)
+	{
+		s2 = "";
+	}
+	strcpy(ptr, s1);
+	strcat(ptr, s2);
 	return (ptr);
 }
