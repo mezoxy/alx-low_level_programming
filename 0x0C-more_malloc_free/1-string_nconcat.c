@@ -28,7 +28,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return (ptr);
 	}
 	else
+	{
 		strcpy(ptr, s1);
-	strncat(ptr, s2, n);
-	return (ptr);
+		strncat(ptr, s2, n);
+		return (ptr);
+	}
 }
