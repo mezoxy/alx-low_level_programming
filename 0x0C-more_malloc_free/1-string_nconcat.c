@@ -24,11 +24,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (n > strlen(s2))
 	{
 		strcpy(ptr, s1);
-		strncpy(ptr, s2, strlen(s2));
+		strcat(ptr, s2);
 		return (ptr);
 	}
 	else
 		strcpy(ptr, s1);
-	strncpy(ptr, s2, n));
+	strncat(ptr, s2, n);
 	return (ptr);
 }
