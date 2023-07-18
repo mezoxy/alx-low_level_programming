@@ -23,7 +23,7 @@ char *create_array(unsigned int size, char c)
 	while (i < size)
 	{
 		ptr[i] = c;
-		i++
+		i++;
 	}
 	return (ptr);
 }
