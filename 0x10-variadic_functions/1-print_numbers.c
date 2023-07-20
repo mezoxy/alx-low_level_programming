@@ -17,6 +17,8 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	va_start(y, n);
 	i = 0;
 
+	if (n == 0)
+		printf("0");
 	while (i < n)
 	{
 		x = va_arg(y, int);
