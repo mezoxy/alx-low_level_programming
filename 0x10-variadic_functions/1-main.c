@@ -8,6 +8,6 @@
  *     */
 int main(void)
 {
-	    print_numbers(NULL, 0);
+	    print_numbers("/", 3, -111, 22, 14);
 	        return (0);
 }
