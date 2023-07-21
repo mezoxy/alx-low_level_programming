@@ -38,7 +38,7 @@ void print_all(const char * const format, ...)
 					printf("%s%s", p, str);
 					break;
 				default:
-					break;
+					continue;
 			}
 			p = ", ";
 			ptr++;
