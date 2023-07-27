@@ -23,8 +23,12 @@ list_t *add_node(list_t **head, const char *str)
 		free(ptr);
 		return (NULL);
 	}
-	ptr->next = *head;
-	*head = ptr;
-	ptr->str = strdup(str);
+	else
+	{
+		ptr->next = *head;
+		ptr->str = strdup(str);
+		ptr->len = strlen(str);
+		*head = ptr;
+	}
 	return (*head);
 }
