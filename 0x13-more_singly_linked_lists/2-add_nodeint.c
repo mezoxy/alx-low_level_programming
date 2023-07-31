@@ -4,7 +4,7 @@
 
 /**
  * add_nodeint - A function that add node at the biginningof a list
- * @h: A pointer
+ * @head: A pointer
  * @n: An integer
  * Return: A pointer
  */
