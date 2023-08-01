@@ -22,7 +22,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		position = position->next;
 	}
 	ptr = malloc(sizeof(listint_t));
-	if (!ptr || idx >= i)
+	if (!ptr || idx > 1 + i)
 		return (NULL);
 	ptr->n = n;
 	if (idx == 0)
