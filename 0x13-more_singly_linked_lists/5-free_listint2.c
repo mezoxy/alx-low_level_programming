@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stddef.h>
 #include "lists.h"
 
 /**
@@ -17,5 +18,5 @@ void free_listint2(listint_t **head)
 		free(ptr);
 		ptr = *head;
 	}
-	return;
+	*head = NULL;
 }
