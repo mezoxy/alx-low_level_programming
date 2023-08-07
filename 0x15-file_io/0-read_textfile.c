@@ -19,12 +19,12 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (!filename)
 		return (0);
 	fptr = fopen(filename, "r");
-	if (!fptr)
-		return (0);
+	/**if (!fptr)
+		return (0);*/
 	while (i < letters && !feof(fptr))
 	{
 		x = fgetc(fptr);
-		_putchar(x);
+		putchar(x);
 		i++;
 	}
 	fclose(fptr);
