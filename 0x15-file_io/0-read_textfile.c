@@ -25,6 +25,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	{
 		putchar(x);
 		i++;
+		if (feof(fptr))
+			return (i);
+		if (ferror(fptr))
+			return (0);
 	}
 	fclose(fptr);
 	return (i);
