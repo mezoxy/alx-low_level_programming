@@ -21,7 +21,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	while ((x = getc(ptr)) != EOF && i < (ssize_t)letters)
 	{
-		putchar(x);
+		ssize_t j =  write(1, &x, 1);
+
+		if (j == -1)
+			return (0);
 		i++;
 	}
 	fclose(ptr);
