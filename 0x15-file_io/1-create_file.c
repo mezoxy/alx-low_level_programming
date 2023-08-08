@@ -16,19 +16,17 @@ int create_file(const char *filename, char *text_content)
 
 	if (!filename)
 		return (-1);
-	if (text_content)
+	if (!text_content)
+		return (0);
+	while (*text_content++)
 	{
-		for (k = 0; text_content[k];)
-		{
-			k++;
-		}
+		k++;
 	}
-	i = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0666);
-	j = write(i, text_content, k);
-	if (i == -1 || j == -1)
-	{
+	i = open(filename,O_WRONLY | O_CREAT | O_TRUNC, 0666);
+	if (i == -1)
 		return (-1);
-	}
+	if (k)
+	j = write(i, text_content, k);
 	close(i);
-	return (1);
+	return (j == k ? 1 : -1);
 }
