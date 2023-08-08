@@ -11,7 +11,7 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	FILE *ptr;
-	ssize_t i = 0;
+	ssize_t i = 0, j;
 	char x;
 
 	if (!filename)
@@ -29,7 +29,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 			fclose(ptr);
 			return (0);
 		}
-		ssize_t j =  write(1, &x, 1);
+		j =  write(1, &x, 1);
 
 		if (j == -1)
 		{
