@@ -27,7 +27,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		if (getc(ptr) == EOF)
 		{
 			fclose(ptr);
-			return (0);
+			return (i);
 		}
 		j =  write(1, &x, 1);
 
