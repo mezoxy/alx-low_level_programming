@@ -2,6 +2,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+
+char *create_buffer(char *file);
+void close_file(int fd);
 /**
  * main - Entry point
  * @argc: Num of arg
