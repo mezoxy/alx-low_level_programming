@@ -1,6 +1,7 @@
 #include "main.h"
 #include <unistd.h>
 #include <stdio.h>
+
 /**
  * read_textfile - A function that reads a text file and print ot to the POSIX
  * @filename: File to be read and printed
@@ -10,7 +11,7 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	FILE *ptr;
-	int i = 0;
+	ssize_t i = 0;
 	char x;
 
 	if (!filename)
@@ -18,11 +19,12 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	ptr = fopen(filename, "r");
 	if (!ptr)
 		return (0);
-	while ((x = getc(ptr)) != EOF && i < (int)letters)
+	while ((x = getc(ptr)) != EOF && i < (ssize_t)letters)
 	{
 		putchar(x);
 		i++;
 	}
+	fclose(ptr);
 	return (i);
 
 }
