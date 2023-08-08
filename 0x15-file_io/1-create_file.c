@@ -12,12 +12,19 @@
 
 int create_file(const char *filename, char *text_content)
 {
-	int i, j;
+	int i, j, k;
 
 	if (!filename)
 		return (-1);
+	if (text_content)
+	{
+		for (k = 0; text_content[k];)
+		{
+			k++;
+		}
+	}
 	i = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0666);
-	j = write(i, text_content, strlen(text_content));
+	j = write(i, text_content, k);
 	if (i == -1 || j == -1)
 		return (-1);
 	close(i);
