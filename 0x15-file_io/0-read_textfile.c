@@ -12,24 +12,24 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	FILE *fptr;
-	char x;
-	size_t i = 0;
+	char *text;
+	ssize_t i, j, k;
 
 	if (!filename)
 		return (0);
-	fptr = fopen(filename, "r");
-	if (!fptr)
+	i = open(filename, 1);
+	if (i == -1)
 		return (0);
-	while (i < letters && (x = fgetc(fptr)) != EOF)
-	{
-		putchar(x);
-		i++;
-		if (feof(fptr))
-			return (i);
-		if (ferror(fptr))
-			return (0);
-	}
-	fclose(fptr);
-	return (i);
+	text = malloc(sizeof(char) * letters);
+	if (!text)
+		return (0);
+	j = read(i, text, letters);
+	if (j == -1)
+		return (0);
+	k = write(1, text, j);
+	if (k == -1)
+		return (0);
+	free(text);
+	close(i);
+	return (k);
 }
