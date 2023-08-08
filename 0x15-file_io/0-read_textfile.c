@@ -21,14 +21,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	{
 		return (0);
 	}
-	while (i < (ssize_t)letters)
+	while ((x = getc(ptr)) != EOF && i < (ssize_t)letters)
 	{
-		x = getc(ptr);
-		if (getc(ptr) == EOF)
-		{
-			fclose(ptr);
-			return (i);
-		}
 		j =  write(1, &x, 1);
 
 		if (j == -1)
