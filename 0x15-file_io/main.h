@@ -1,7 +1,8 @@
 #ifndef MAIN_H
 #define MAIN_H
-#include <stddef.h>
-#include <stdio.h>
+
+#include <sys/types.h>
+#include <fcntl.h>
 
 int _putchar(char c);
 int append_text_to_file(const char *filename, char *text_content);
