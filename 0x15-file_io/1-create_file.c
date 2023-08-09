@@ -21,7 +21,7 @@ int create_file(const char *filename, char *text_content)
 	d = (int)open(filename, O_RDONLY);
 	if (d == -1)
 	{
-		j = (int)open(filename, O_WRONLY | O_CREAT, 0600);
+		j = (int)open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);
 		h = (int)write(j, text_content, strlen(text_content));
 		if (h == -1)
 		{
