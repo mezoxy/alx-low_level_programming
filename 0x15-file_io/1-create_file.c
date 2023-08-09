@@ -1,7 +1,9 @@
-#include "main.h"
-#include <string.h>
-#include <unistd.h>
 #include <stdio.h>
+#include <unistd.h>
+#include <string.h>
+#include <stdlib.h>
+#include <fcntl.h>
+
 
 /**
  * create_file - A function that creates a file
@@ -12,22 +14,32 @@
 
 int create_file(const char *filename, char *text_content)
 {
-	int i, j, k = 0;
+	int i, j, h, d;
 
-	if (!filename)
+	if (filename == NULL)
 		return (-1);
-
-	if (text_content != NULL)
+	d = (int)open(filename, O_RDONLY);
+	if (d == -1)
 	{
-		for (; text_content[k];)
-			k++;
+		j = (int)open(filename,O_WRONLY | O_CREAT, 0600);
+		h = (int)write(j, text_content, strlen(text_content));
+		if (h == -1)
+		{
+			close (j);
+			return (-1);
+		}
+		close(j);
+		return (1);
 	}
-	i = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0666);
-	j = write(i, text_content, k);
-
-	if (i == -1 || j == -1)
+	i = (int)open(filename, O_WRONLY);
+	if (i == -1)
 		return (-1);
-
+	h = (int)write(i, text_content, strlen(text_content));
+	if (h == -1)
+	{
+		close(i);
+		return (-1);
+	}
 	close(i);
 	return (1);
 }
