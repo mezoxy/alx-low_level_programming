@@ -20,7 +20,7 @@ size_t print_listint_safe(const listint_t *head)
 		ptr = ptr->next;
 		ptr1 = ptr1->next->next;
 		if (ptr == ptr1)
-			break;
+			exit(98);
 	}
 	return (i);
 }
