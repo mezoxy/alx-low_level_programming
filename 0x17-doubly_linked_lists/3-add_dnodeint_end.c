@@ -1,7 +1,12 @@
 #include "lists.h"
 
 /**
+ * add_dnodeint_end - A function
+ * @head: A pointer
+ * @n: A data
+ * Return: A pointer
  */
+
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
 	dlistint_t *new_end = NULL, *ptr = *head;
