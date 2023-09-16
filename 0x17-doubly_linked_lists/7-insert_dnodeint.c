@@ -18,6 +18,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	new->n = n;
 	if (idx == 0)
 	{ *h = add_dnodeint(h, n);
+		free(new);
 		return (*h); }
 	i = 0;
 	while (tmp)
@@ -36,6 +37,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	if (idx == i)
 	{
 		*h = add_dnodeint_end(h, n);
+		free(new);
 		return (*h);
 	}
 	return (NULL);
