@@ -1,12 +1,5 @@
 #include "lists.h"
 
-/**
- * insert_dnodeint_at_index - A function
- * @h: A pointer
- * @idx: An inedx
- * @n: Data
- * Return: A node
- */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *new, *tmp = *h;
