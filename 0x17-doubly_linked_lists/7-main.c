@@ -10,10 +10,10 @@
  *     */
 int main(void)
 {
-	dlistint_t *head;
+	dlistint_t *head, *ptr, *ptr1;
 
 	head = NULL;
-	add_dnodeint_end(&head, 0);
+	/**add_dnodeint_end(&head, 0);
 	add_dnodeint_end(&head, 1);
 	add_dnodeint_end(&head, 2);
 	add_dnodeint_end(&head, 3);
@@ -21,12 +21,21 @@ int main(void)
 	add_dnodeint_end(&head, 98);
 	add_dnodeint_end(&head, 402);
 	add_dnodeint_end(&head, 1024);
-	print_dlistint(head);
+	print_dlistint(head);*/
 	printf("-----------------\n");
-	insert_dnodeint_at_index(&head, 0, 4096);
-	insert_dnodeint_at_index(&head, 0, -4096);
-	insert_dnodeint_at_index(&head, 0, -2);
+	ptr1 = insert_dnodeint_at_index(&head, 0, 4096);
+	printf("#-> %d\n", ptr1->n);
 	print_dlistint(head);
+	ptr = head;
+	while (ptr->next)
+	{
+		ptr = ptr->next;
+	}
+	while (ptr)
+	{
+		printf("$$$%d\n", ptr->n);
+		ptr = ptr->prev;
+	}
 	free_dlistint(head);
 	head = NULL;
 	return (EXIT_SUCCESS);
