@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include "lists.h"
 
-size_t _print_dlistint_backward(const dlistint_t *h);
+/*size_t _print_dlistint_backward(const dlistint_t *h);*/
 
 /**
  *  * _create_dlist - Create a list
@@ -74,8 +74,8 @@ int main(void)
 	printf("-> %d\n", r);
 	n = print_dlistint(head);
 	printf("-> %lu elements\n", n);
-	n = _print_dlistint_backward(head);
-	printf("-> %lu elements\n", n);
+	/*n = _print_dlistint_backward(head);*/
+/*	printf("-> %lu elements\n", n);*/
 	_free_dlistint(head);
 	return (0);
 }
