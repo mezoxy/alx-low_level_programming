@@ -1,39 +1,28 @@
 #include "main.h"
-#include <unistd.h>
-#include <stdio.h>
-
+#include <stdlib.h>
 /**
- * read_textfile - A function that reads a text file and print ot to the POSIX
- * @filename: File to be read and printed
- * @letters: Num of char to be read and printed
- * Return: Num of actual number of letters printed and read
  */
+
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	FILE *ptr;
-	ssize_t i = 0, j;
-	char x;
+	char *buf;
+	int fd;
+	ssize_t r, w;
 
-	if (!filename)
+	buf = malloc(sizeof(char) * (letters + 1));
+	if (!buf)
 		return (0);
-	ptr = malloc(sizeof(FILE))
-	ptr = fopen(filename, "r");
-	if (!ptr)
-	{
+	fd = open(filename, O_RDONLY);
+
+	if (fd == -1)
 		return (0);
-	}
-	while ((x = getc(ptr)) != EOF && i < (ssize_t)letters)
-	{
-		j =  write(1, &x, 1);
-
-		if (j == -1)
-		{
-			fclose(ptr);
-			return (0);
-		}
-		i++;
-	}
-	fclose(ptr);
-	return (i);
-
+	r = read(fd, buf, letters);
+	if (r == -1)
+		return (0);
+	w = write(1, buf, letters);
+	if (w == -1)
+		return (0);
+	free(buf);
+	close (fd);
+	return (w);
 }
