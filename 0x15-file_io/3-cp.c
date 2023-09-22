@@ -26,10 +26,10 @@ int main(int argc, char **argv)
 	i = close(fd_from);
 	j = close(fd_to);
 	if (j == -1)
-	{ dprintf(STDERR_FILENO, "Error: Can't close fd %d", fd_to);
+	{ dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_to);
 		exit(100); }
 	if (i == -1)
-	{ dprintf(STDERR_FILENO, "Error: Can't close fd %d", fd_from);
+	{ dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_from);
 		exit(100); }
 	return (0);
 }
