@@ -7,7 +7,7 @@ int main(int argc, char **argv)
 {
 	int fd_from, fd_to, i, j;
 	ssize_t w, r;
-	char buf[2000];
+	char buf[4000];
 
 	if (argc != 3)
 	{ dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
