@@ -7,6 +7,7 @@
 #include <stdlib.h>
 #include <errno.h>
 
+
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -16,7 +17,7 @@
  * Description: doubly linked list node structure
  * for stack, queues, LIFO, FIFO
  */
-
+extern char **array;
 typedef struct stack_s
 {
 	int n;
@@ -38,12 +39,13 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-char **_getl(FILE *fp);
-stack_t *push(stack_t **stack, int n);
+char **_getl(FILE *file);
+void _push(stack_t **stack, unsigned int line_number);
 void p_er(char *str);
-void pall(stack_t **stack);
-void free_array(char **tokens);
+void _pall(stack_t **stack, unsigned int line_number);
 char **parse(char *str);
-int count(FILE *fp);
+void free_array(char **tokens);
+int count(char *line);
+int check_instr(char **str);
 
 #endif
