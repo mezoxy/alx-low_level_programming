@@ -4,6 +4,7 @@
  * hash_table_set - A function that ads an element to the hash table
  * @key: A string
  * @value: A string
+ * @ht: A pointer t the hash table
  * Return: 1 (Success) else 0
  */
 
