@@ -19,7 +19,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (!node2add->value || !node2add->key)
 	{
 		free(node2add->value);
-		free(node2add->key)
+		free(node2add->key);
 		free(node2add);
 		return (0);
 	}
