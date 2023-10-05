@@ -16,8 +16,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	node2add->next = NULL;
 	node2add->key = strdup(key);
 	node2add->value = strdup(value);
-	if (!node2add->value || node2add->key)
+	if (!node2add->value || !node2add->key)
 	{
+		free(node2add->value);
+		free(node2add->key)
 		free(node2add);
 		return (0);
 	}
