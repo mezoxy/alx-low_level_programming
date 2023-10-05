@@ -1,6 +1,10 @@
 #include "hash_tables.h"
 
 /**
+ * hash_table_set - A function that ads an element to the hash table
+ * @key: A string
+ * @value: A string
+ * Return: 1 (Success) else 0
  */
 
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
