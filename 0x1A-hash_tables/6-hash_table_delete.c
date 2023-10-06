@@ -19,12 +19,18 @@ void hash_table_delete(hash_table_t *ht)
 			if (ptr->next)
 			{
 				ptr1 = ptr->next;
+				free(ptr->key);
+				free(ptr->value);
 				free(ptr->next);
 				free(ptr);
 				ptr = ptr1;
 			}
 			else
+			{
+				free(ptr->key);
+				free(ptr->value);
 				free(ptr);
+			}
 		}
 		i++;
 	}
