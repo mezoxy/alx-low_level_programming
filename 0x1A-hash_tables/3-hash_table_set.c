@@ -13,15 +13,15 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *node2add = NULL;
 	unsigned long int i;
 
-	if (!ht)
-		return (0);
-	if (ht->size == 0)
+	if (!ht || ht->size == 0)
 		return (0);
 	node2add = malloc(sizeof(hash_node_t));
 	if (!node2add)
 		return (0);
 	node2add->next = NULL;
 	node2add->key = strdup(key);
+	if (!value)
+		node2add->value = NULL;
 	node2add->value = strdup(value);
 	if (!node2add->value || !node2add->key)
 	{
