@@ -21,7 +21,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	node2add->next = NULL;
 	node2add->key = strdup(key);
 	if (!value)
-		node2add->value = NULL;
+		node2add->value = "";
 	node2add->value = strdup(value);
 	if (!node2add->value || !node2add->key)
 	{
