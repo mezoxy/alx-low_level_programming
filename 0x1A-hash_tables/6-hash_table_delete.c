@@ -19,6 +19,7 @@ void hash_table_delete(hash_table_t *ht)
 			if (ptr->next)
 			{
 				ptr1 = ptr->next;
+				free(ptr->next);
 				free(ptr);
 				ptr = ptr1;
 			}
