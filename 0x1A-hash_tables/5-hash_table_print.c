@@ -17,30 +17,15 @@ void hash_table_print(const hash_table_t *ht)
 	while (i < ht->size)
 	{
 		ptr = ht->array[i];
-		if (ptr)
+		while (ptr)
 		{
+			if (j == 1)
+				printf(", ");
 			printf("'%s': '%s'", ptr->key, ptr->value);
-			break; }
-		i++;
-	}
-	i = i + 1;
-	while (i < ht->size && i != j)
-	{
-		ptr = ht->array[i];
-		if (ptr)
-			printf(", '%s': '%s'", ptr->key, ptr->value);
+			j = 1;
+			ptr = ptr->next;
+		}
 		i++;
 	}
 	printf("}\n");
-}
-
-void print_list(hash_node_t *head)
-{
-	hash_node_t *ptr = head;
-
-	while (ptr)
-	{
-		printf(", '%s': '%s'", ptr->key, ptr->value);
-		ptr = ptr->next;
-	}
 }
