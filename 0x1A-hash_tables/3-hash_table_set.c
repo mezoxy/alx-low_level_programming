@@ -40,6 +40,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		free((ht->array)[i]->key);
 		free((ht->array)[i]->value);
+		free(ht->array[i]->next);
 		node2add->next = NULL;
 		(ht->array)[i] = node2add;
 		return (1); }
