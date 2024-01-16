@@ -17,11 +17,11 @@ int binary_search(int *array, size_t size, int value)
 		printf("Searching in array: ");
 		for (i = r; i <= l; i++)
 		{
-			printf("%d", array[i]);
 			if (i < l)
-				printf(", ");
+				printf("%d, ", array[i]);
+			if (i == l)
+				printf("%d\n", array[i]);
 		}
-		printf("\n");
 		if (array[m] == value)
 			return (m);
 		if (array[m] > value)
